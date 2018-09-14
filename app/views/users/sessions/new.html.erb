@@ -1,0 +1,58 @@
+<body class="nav-md">
+<div class="container body">
+  <div class="main_container">
+    <%#div class="animate form login_form"%>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="row">
+        <h2>Session Log in</h2>
+        <section class = "login_content">
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div>
+
+                <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control", placeholder:"Email" %>
+              </div>
+
+              <div>
+
+                <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder:"Password" %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                  </div>
+              <% end -%>
+
+
+              <div>
+                <%= f.submit "Log in", class:"btn btn-default submit" %>
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                <%= render "users/shared/links" %>
+
+                <div class="clearfix"></div>
+                <br />
+
+              </div>
+
+          <% end %>
+
+
+        </section>
+      </div>
+      </div>
+
+  </div>
+</div>
+</body>
+
+
+
+
+
+

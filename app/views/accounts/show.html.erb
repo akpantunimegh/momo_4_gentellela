@@ -1,0 +1,84 @@
+<body class="nav-md">
+
+<div class="container body">
+  <div class="main_container">
+    <div class="right_col" role="main">
+
+    <p id="notice"><%= notice %></p>
+<% if @account.nil? %>
+    # flash[:warn ] = "Account not found, create one using the button below.."
+    <button class="btn btn-default source" onclick="new PNotify({
+        title: 'Non-Blocking Notice',
+        type: 'info',
+        text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
+        nonblock: {
+            nonblock: true
+            },
+        styling: 'bootstrap3',
+        addclass: 'dark'
+        });">Non-Blocking Notice</button>
+
+    <hr />
+
+    <%= link_to 'Create New Account', new_account_path %>
+
+    <% else %>
+    <p>
+      <strong>Oid:</strong>
+      <%= @account.Oid %>
+    </p>
+
+    <p>
+      <strong>Code:</strong>
+      <%= @account.account_reference %>
+    </p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @account.name %>
+    </p>
+
+    <p>
+      <strong>Balance:</strong>
+      <%= @account.balance %>
+    </p>
+
+    <p>
+      <strong>Blocked:</strong>
+      <%= @account.blocked %>
+    </p>
+
+    <p>
+      <strong>Date blocked:</strong>
+      <%= @account.date_blocked %>
+    </p>
+
+    <p>
+      <strong>Expired:</strong>
+      <%= @account.expired %>
+    </p>
+
+    <p>
+      <strong>Date of expiry:</strong>
+      <%= @account.date_of_expiry %>
+    </p>
+
+    <p>
+      <strong>Bank:</strong>
+      <%= @account.bank %>
+    </p>
+
+
+
+    <%= link_to 'Edit', edit_user_account_path(:user,:account) %> |
+    <%= link_to 'Back', user_accounts_path %>
+<% end %>
+<!-- PNotify -->
+<script src="../vendors/pnotify/dist/pnotify.js"></script>
+<script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+<script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+  </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Oid: MyString
+  code: MyString
+  name: MyString
+  description: MyString
+  blocked: false
+  date_blocked: 2018-08-27 20:59:23
+  balance: 
+  account_id: 
+
+two:
+  Oid: MyString
+  code: MyString
+  name: MyString
+  description: MyString
+  blocked: false
+  date_blocked: 2018-08-27 20:59:23
+  balance: 
+  account_id: 

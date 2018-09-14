@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oid:</strong>
+  <%= @payment.Oid %>
+</p>
+
+<p>
+  <strong>Follio:</strong>
+  <%= @payment.follio %>
+</p>
+
+<p>
+  <strong>Token code:</strong>
+  <%= @payment.token_code %>
+</p>
+
+<p>
+  <strong>Action code:</strong>
+  <%= @payment.action_code %>
+</p>
+
+<p>
+  <strong>Payment class:</strong>
+  <%= @payment.payment_class %>
+</p>
+
+<p>
+  <strong>Source account:</strong>
+  <%= @payment.source_account %>
+</p>
+
+<p>
+  <strong>Source identifier:</strong>
+  <%= @payment.source_identifier %>
+</p>
+
+<p>
+  <strong>Target account:</strong>
+  <%= @payment.target_account %>
+</p>
+
+<p>
+  <strong>Target identifier:</strong>
+  <%= @payment.target_identifier %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @payment.value %>
+</p>
+
+<p>
+  <strong>Charges:</strong>
+  <%= @payment.charges %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @payment.paid %>
+</p>
+
+<p>
+  <strong>Date of entry:</strong>
+  <%= @payment.date_of_entry %>
+</p>
+
+<p>
+  <strong>Instant:</strong>
+  <%= @payment.instant %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

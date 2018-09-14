@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Oid: MyString
+  follio: MyString
+  window_hours: 1
+  token_code: MyString
+  date_of_confirmation: 2018-08-27 21:26:12
+  date_of_cancelation: 2018-08-27 21:26:12
+  device_of_cancelation: MyString
+  device_of_transaction: MyString
+  device_of_confirmation: MyString
+  confirmed: false
+  comment: MyString
+  account_id: 
+
+two:
+  Oid: MyString
+  follio: MyString
+  window_hours: 1
+  token_code: MyString
+  date_of_confirmation: 2018-08-27 21:26:12
+  date_of_cancelation: 2018-08-27 21:26:12
+  device_of_cancelation: MyString
+  device_of_transaction: MyString
+  device_of_confirmation: MyString
+  confirmed: false
+  comment: MyString
+  account_id: 

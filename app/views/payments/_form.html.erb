@@ -1,0 +1,73 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Oid %><br>
+    <%= f.text_field :Oid %>
+  </div>
+  <div class="field">
+    <%= f.label :follio %><br>
+    <%= f.text_field :follio %>
+  </div>
+  <div class="field">
+    <%= f.label :token_code %><br>
+    <%= f.text_field :token_code %>
+  </div>
+  <div class="field">
+    <%= f.label :action_code %><br>
+    <%= f.text_field :action_code %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_class %><br>
+    <%= f.text_field :payment_class %>
+  </div>
+  <div class="field">
+    <%= f.label :source_account %><br>
+    <%= f.text_field :source_account %>
+  </div>
+  <div class="field">
+    <%= f.label :source_identifier %><br>
+    <%= f.text_field :source_identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :target_account %><br>
+    <%= f.text_field :target_account %>
+  </div>
+  <div class="field">
+    <%= f.label :target_identifier %><br>
+    <%= f.text_field :target_identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :charges %><br>
+    <%= f.text_field :charges %>
+  </div>
+  <div class="field">
+    <%= f.label :settled %><br>
+    <%= f.check_box :settled %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_entry %><br>
+    <%= f.text_field :date_of_entry %>
+  </div>
+  <div class="field">
+    <%= f.label :instant_id %><br>
+    <%= f.text_field :instant_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

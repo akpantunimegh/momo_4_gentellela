@@ -1,0 +1,4 @@
+module WalletsHelper
+
+
+end

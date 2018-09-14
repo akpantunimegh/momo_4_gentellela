@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oid:</strong>
+  <%= @instant.Oid %>
+</p>
+
+<p>
+  <strong>Follio:</strong>
+  <%= @instant.follio %>
+</p>
+
+<p>
+  <strong>Window hours:</strong>
+  <%= @instant.window_hours %>
+</p>
+
+<p>
+  <strong>Token code:</strong>
+  <%= @instant.token_code %>
+</p>
+
+<p>
+  <strong>Date of confirmation:</strong>
+  <%= @instant.date_of_confirmation %>
+</p>
+
+<p>
+  <strong>Date of cancelation:</strong>
+  <%= @instant.date_of_cancelation %>
+</p>
+
+<p>
+  <strong>Device of cancelation:</strong>
+  <%= @instant.device_of_cancelation %>
+</p>
+
+<p>
+  <strong>Device of transaction:</strong>
+  <%= @instant.device_of_transaction %>
+</p>
+
+<p>
+  <strong>Device of confirmation:</strong>
+  <%= @instant.device_of_confirmation %>
+</p>
+
+<p>
+  <strong>Confirmed:</strong>
+  <%= @instant.confirmed %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @instant.comment %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @instant.account %>
+</p>
+
+<%= link_to 'Edit', edit_instant_path(@instant) %> |
+<%= link_to 'Back', instants_path %>

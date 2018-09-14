@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Oid: MyString
+  token_code: MyString
+  chain_id: MyString
+  action_code: MyString
+  action_class: MyString
+  follio: MyString
+  source_account: MyString
+  target_account: MyString
+  source_identifier: MyString
+  target_identifier: MyString
+  value: 9.99
+  charges: 9.99
+  date_of_transaction: 2018-08-25 12:02:25
+  window_days: 1
+  date_of_confirmation: 2018-08-25 12:02:25
+  date_of_cancelation: 2018-08-25 12:02:25
+  device_of_cancelation: MyString
+  device_of_transaction: MyString
+  device_of_confirmation: MyString
+  confirmed: false
+  comment: MyString
+  account_id: 
+
+two:
+  Oid: MyString
+  token_code: MyString
+  chain_id: MyString
+  action_code: MyString
+  action_class: MyString
+  follio: MyString
+  source_account: MyString
+  target_account: MyString
+  source_identifier: MyString
+  target_identifier: MyString
+  value: 9.99
+  charges: 9.99
+  date_of_transaction: 2018-08-25 12:02:25
+  window_days: 1
+  date_of_confirmation: 2018-08-25 12:02:25
+  date_of_cancelation: 2018-08-25 12:02:25
+  device_of_cancelation: MyString
+  device_of_transaction: MyString
+  device_of_confirmation: MyString
+  confirmed: false
+  comment: MyString
+  account_id: 

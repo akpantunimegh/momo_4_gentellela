@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="span2">
+        <div class="sidebar">
+          <%#= render "staffs/main_staff_menu"%>
+        </div>
+      </div>
+
+
+      <%= form_tag(@acount, :method => "get", id: "search-form", html_options: {class: "navbar-search pull-left input-append"}) do |f| %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search by Staff file" %>
+          <%= button_tag("", class: ["btn", "icon-search"]) %>
+      <% end %>
+
+      <% if @account.present? %>
+          <%= render @account %>
+      <% else %>
+          <p>There are no staff with the term(s) <%= params[:search] %>.</p>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+
+

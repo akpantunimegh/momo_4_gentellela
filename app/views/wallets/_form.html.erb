@@ -1,0 +1,66 @@
+
+
+                <%= form_for([@user,@account,@wallet], html: { class:"form-horizontal row-fluid" }) do |f| %>
+
+                    <% if @wallet.errors.any? %>
+                        <div id="error_explanation">
+                          <h2><%= pluralize(@wallet.errors.count, "error") %> prohibited this wallet from being saved:</h2>
+
+                          <ul>
+                            <% @wallet.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                            <% end %>
+                          </ul>
+                        </div>
+                    <% end %>
+
+                    <% if @wallet.new_record? %>
+
+                    <% else %>
+                        <div class="field">
+                          <%= f.label :code %><br>
+                          <%= f.text_field :code %>
+                        </div>
+                    <% end %>
+                    <div class="field">
+                      <%= f.label :name %><br>
+                      <%= f.text_field :name %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :description %><br>
+                      <%= f.text_field :description %>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :blocked %><br>
+                      <%= f.check_box :blocked %>
+                    </div>
+
+                    <% if @wallet.new_record? %>
+
+                        <div class="field">
+                          <%= f.label :Oid %><br>
+                          <%= f.text_field :Oid %>
+                        </div>
+
+                        <% else %>
+                        <div class="field">
+                          <%= f.label :date_blocked %><br>
+                          <%= f.datetime_select :date_blocked %>
+                        </div>
+                        <div class="field">
+                          <%= f.label :available_balance %><br>
+                          <%= f.text_field :available_balance %>
+                        </div>
+                        <% end %>
+                            <div class="field">
+                      <%= f.label :account_id %><br>
+                      <%= f.text_field :account_id %>
+                    </div>
+                    <div class="actions">
+                      <%= f.submit %>
+
+                      <%= link_to 'Back', user_account_wallets_path %>
+                    </div>
+                <% end %>
+
